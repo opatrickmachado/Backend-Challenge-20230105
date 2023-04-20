@@ -48,8 +48,8 @@ services:
             retries: 3
             timeout: 5s
     phpmyadmin:
-        depends_on: 
-            - mysql   
+        depends_on:
+            - mysql
         image: phpmyadmin/phpmyadmin
         environment:
             - PMA_HOST=mysql
@@ -57,7 +57,7 @@ services:
         networks:
             - sail
         ports:
-            - 8001:80
+            - 8080:80
 networks:
     sail:
         driver: bridge
